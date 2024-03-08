@@ -1,0 +1,36 @@
+﻿﻿@using System.Data;
+@model ApiConsume.Areas.Customers.Models.CustomersModel
+@{
+    Layout = "_Layout";
+}
+@using (Html.BeginForm("Insert", "Customers", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">customers form</h4>
+
+                    <div>@Html.HiddenFor(model => model.customer_id)</div>
+                    <div>@Html.LabelFor(model => model.first_name)</div>
+                    <div>@Html.TextBoxFor(model => model.first_name, new { @class = "form-control " })</div>
+                    <div>@Html.LabelFor(model => model.last_name)</div>
+                    <div> @Html.TextBoxFor(model => model.last_name, new { @class = "form-control" })</div>
+                    <div>@Html.LabelFor(model => model.email)</div>
+                    <div> @Html.TextBoxFor(model => model.email, new { @class = "form-control " })</div>
+                    <div>@Html.LabelFor(model => model.phone_number)</div>
+                    <div> @Html.TextBoxFor(model => model.phone_number, new { @class = "form-control " })</div>
+                    
+
+
+
+                    <div>
+                        <button type="submit" class="btn btn-outline-primary mr-2 mt-2">Submit</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+}

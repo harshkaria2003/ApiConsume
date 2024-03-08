@@ -1,0 +1,5496 @@
+{
+	"info": {
+		"_postman_id": "e5b1035d-7320-4cd1-a76b-62c1e0984d40",
+		"name": "GNAccountAPI's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20757408",
+		"_collection_link": "https://bold-satellite-717434.postman.co/workspace/Team-Workspace~2b2d26f0-cf6a-42a4-853b-ca4e52e527fb/collection/20757408-e5b1035d-7320-4cd1-a76b-62c1e0984d40?action=share&source=collection_link&creator=20757408"
+	},
+	"item": [
+		{
+			"name": "1) Account Group",
+			"item": [
+				{
+					"name": "getAccountGroup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountGroupSelectRelativeAccountGroupComboBox/CommonAccount/getAccountGroupSelectRelativeAccountGroupComboBox",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountGroupSelectRelativeAccountGroupComboBox",
+								"CommonAccount",
+								"getAccountGroupSelectRelativeAccountGroupComboBox"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountGroupSelectPage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "PageOffset",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "PageSize",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupPrintName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "BalanceSheetName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ParentAccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "TopAccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "RelativeAccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ReportType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountIn",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecOperationID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountGroupSelectPage/CommonAccount/getAccountGroupSelectPage",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountGroupSelectPage",
+								"CommonAccount",
+								"getAccountGroupSelectPage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountGroupDelete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountGroupDelete/CommonAccount/AccountGroupDelete",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountGroupDelete",
+								"CommonAccount",
+								"AccountGroupDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountInCombobox",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "ComboName",
+									"value": "AccountIn",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/HardcodeComboSelectComboBoxByComboName/CommonAccount/getHardcodeComboSelectComboBoxByComboName",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"HardcodeComboSelectComboBoxByComboName",
+								"CommonAccount",
+								"getHardcodeComboSelectComboBoxByComboName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountGroupSelectView",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupID",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountGroupSelectView/CommonAccount/getAccountGroupSelectView",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountGroupSelectView",
+								"CommonAccount",
+								"getAccountGroupSelectView"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getHardcodeComboSelectComboBoxByComboName(ReportType)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "ComboName",
+									"value": "ReportType",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/HardcodeComboSelectComboBoxByComboName/CommonAccount/getHardcodeComboSelectComboBoxByComboName",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"HardcodeComboSelectComboBoxByComboName",
+								"CommonAccount",
+								"getHardcodeComboSelectComboBoxByComboName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountGroupInsert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupName",
+									"value": "asd",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupPrintName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "BalanceSheetName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ParentAccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "TopAccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "RelativeAccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ReportType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountIn",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "BalanceOn",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "IsEditable",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "FlowType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountGroupInsert/CommonAccount/AccountGroupInsert",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountGroupInsert",
+								"CommonAccount",
+								"AccountGroupInsert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountGroupUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupPrintName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "BalanceSheetName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ParentAccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "TopAccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "RelativeAccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ReportType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountIn",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "BalanceOn",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "IsEditable",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "FlowType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountGroupUpdate/CommonAccount/AccountGroupUpdate",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountGroupUpdate",
+								"CommonAccount",
+								"AccountGroupUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountGroupSelectPK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupID",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountGroupSelectPK/CommonAccount/getAccountGroupSelectPK",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountGroupSelectPK",
+								"CommonAccount",
+								"getAccountGroupSelectPK"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2) Account Category",
+			"item": [
+				{
+					"name": "getAccountCategorySelectPage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "PageOffset",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "PageSize",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "TotalRecords",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "AccountCategoryName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "SecOperationID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountCategorySelectPage/CommonAccount/getAccountCategorySelectPage",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountCategorySelectPage",
+								"CommonAccount",
+								"getAccountCategorySelectPage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountCategorySelectPK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountCategoryID",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountCategorySelectPK/CommonAccount/getAccountCategorySelectPK",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountCategorySelectPK",
+								"CommonAccount",
+								"getAccountCategorySelectPK"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountCategoryUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountCategoryID",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "AccountCategoryName",
+									"value": "Demo Darshan 1",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountCategoryUpdate/CommonAccount/AccountCategoryUpdate",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountCategoryUpdate",
+								"CommonAccount",
+								"AccountCategoryUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountCategoryInsert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountCategoryName",
+									"value": "Demo MEHUL",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountCategoryInsert/CommonAccount/AccountCategoryInsert",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountCategoryInsert",
+								"CommonAccount",
+								"AccountCategoryInsert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountCategorySelectView",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountCategoryID",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountCategorySelectView/CommonAccount/getAccountCategorySelectView",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountCategorySelectView",
+								"CommonAccount",
+								"getAccountCategorySelectView"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountCategoryDelete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "AccountCategoryID",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountCategoryDelete/CommonAccount/AccountCategoryDelete",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountCategoryDelete",
+								"CommonAccount",
+								"AccountCategoryDelete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3) Account Type",
+			"item": [
+				{
+					"name": "getAccountTypeSelectPage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "PageOffset",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "PageSize",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "TotalRecords",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountTypeName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "IsCustomizedScreen",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "SecOperationID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountTypeSelectPage/CommonAccount/getAccountTypeSelectPage",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountTypeSelectPage",
+								"CommonAccount",
+								"getAccountTypeSelectPage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountTypeDelete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountTypeID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountTypeDelete/CommonAccount/AccountTypeDelete",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountTypeDelete",
+								"CommonAccount",
+								"AccountTypeDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountTypeSelectView",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountTypeID",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountTypeSelectView/CommonAccount/getAccountTypeSelectView",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountTypeSelectView",
+								"CommonAccount",
+								"getAccountTypeSelectView"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountTypeSelectComboBox",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BHAVIN_BASE_URL}}/AccountTypeSelectComboBox/CommonAccount/getAccountTypeSelectComboBox",
+							"host": [
+								"{{BHAVIN_BASE_URL}}"
+							],
+							"path": [
+								"AccountTypeSelectComboBox",
+								"CommonAccount",
+								"getAccountTypeSelectComboBox"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountTypeSelectPK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountTypeID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountTypeSelectPK/CommonAccount/AccountTypeSelectPK",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountTypeSelectPK",
+								"CommonAccount",
+								"AccountTypeSelectPK"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountTypeUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountTypeID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountTypeName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "IsCustomizedScreen",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountTypeUpdate/CommonAccount/AccountTypeUpdate",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountTypeUpdate",
+								"CommonAccount",
+								"AccountTypeUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountTypeInsert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountTypeID",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "AccountTypeName",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "IsCustomizedScreen",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountTypeInsert/CommonAccount/AccountTypeInsert",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountTypeInsert",
+								"CommonAccount",
+								"AccountTypeInsert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "4) Account Doc",
+			"item": [
+				{
+					"name": "getVoucherSelectComboBox",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/VoucherSelectComboBox/CommonAccount/getVoucherSelectComboBox",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"VoucherSelectComboBox",
+								"CommonAccount",
+								"getVoucherSelectComboBox"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountDocSelectPage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "PageOffset",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "PageSize",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocCode",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "SecOperationID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountDocSelectPage/CommonAccount/getAccountDocSelectPage",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountDocSelectPage",
+								"CommonAccount",
+								"getAccountDocSelectPage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountDocDelete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountDocDelete/CommonAccount/AccountDocDelete",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountDocDelete",
+								"CommonAccount",
+								"AccountDocDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountDocSelectView",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocID",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountDocSelectView/CommonAccount/getAccountDocSelectView",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountDocSelectView",
+								"CommonAccount",
+								"getAccountDocSelectView"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountDocSelectPK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountDocSelectPK/CommonAccount/getAccountDocSelectPK",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountDocSelectPK",
+								"CommonAccount",
+								"getAccountDocSelectPK"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getVoucherSelectPK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/VoucherSelectPK/CommonAccount/getVoucherSelectPK",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"VoucherSelectPK",
+								"CommonAccount",
+								"getVoucherSelectPK"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountDocUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocID",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocCode",
+									"value": "chk",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "PrintTitle",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "TermsCondition",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HeadLine1",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HeadLine2",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HeadLine3",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Config1",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Config2",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Config3",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountDocUpdate/CommonAccount/AccountDocUpdate",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountDocUpdate",
+								"CommonAccount",
+								"AccountDocUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountDocInsert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocCode",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocName",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "PrintTitle",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "TermsCondition",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HeadLine1",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HeadLine2",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HeadLine3",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Config1",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Config2",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Config3",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountDocInsert/CommonAccount/AccountDocInsert",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountDocInsert",
+								"CommonAccount",
+								"AccountDocInsert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "5) Acc Document",
+			"item": [
+				{
+					"name": "getAccountVoucherSelectComboBox",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountVoucherSelectComboBox/CommonAccount/getAccountVoucherSelectComboBox",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountVoucherSelectComboBox",
+								"CommonAccount",
+								"getAccountVoucherSelectComboBox"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCompanySelectComboBox",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/CompanySelectComboBox/CommonAccount/getCompanySelectComboBox",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"CompanySelectComboBox",
+								"CommonAccount",
+								"getCompanySelectComboBox"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFinYearSelectComboBox",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/FinYearSelectComboBox/CommonAccount/getFinYearSelectComboBox",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"FinYearSelectComboBox",
+								"CommonAccount",
+								"getFinYearSelectComboBox"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccDocumentSelectPage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "PageOffset",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "PageSize",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "TotalRecords",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "DocumentICID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "VoucherNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "DocumentPKID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "DocumentDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Narration",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "FinYearID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecOperationID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccDocumentSelectPage/CommonAccount/getAccDocumentSelectPage",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccDocumentSelectPage",
+								"CommonAccount",
+								"getAccDocumentSelectPage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccDocumentSelectView",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccDocumentID",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccDocumentSelectView/CommonAccount/getAccDocumentSelectView",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccDocumentSelectView",
+								"CommonAccount",
+								"getAccDocumentSelectView"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccDocumentSelectPK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccDocumentID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccDocumentSelectPK/CommonAccount/getAccDocumentSelectPK",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccDocumentSelectPK",
+								"CommonAccount",
+								"getAccDocumentSelectPK"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccDocumentInsert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccDocumentID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "DocumentICID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "VoucherNo",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "DocumentPKID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "DocumentDate",
+									"value": "12-02-2024",
+									"type": "text"
+								},
+								{
+									"key": "Amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Narration",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "FinYearID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "12-02-2024",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "12-02-2024",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccDocumentInsert/CommonAccount/AccDocumentInsert",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccDocumentInsert",
+								"CommonAccount",
+								"AccDocumentInsert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccDocumentUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccDocumentID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "DocumentICID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "VoucherNo",
+									"value": "85",
+									"type": "text"
+								},
+								{
+									"key": "DocumentPKID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "DocumentDate",
+									"value": "12/02/2024",
+									"type": "text"
+								},
+								{
+									"key": "Amount",
+									"value": "2500",
+									"type": "text"
+								},
+								{
+									"key": "Narration",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "FinYearID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "12/02/2024",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "12/02/2024",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccDocumentUpdate/CommonAccount/AccDocumentUpdate",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccDocumentUpdate",
+								"CommonAccount",
+								"AccDocumentUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccDocumentDelete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccDocumentID",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccDocumentDelete/CommonAccount/AccDocumentDelete",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccDocumentDelete",
+								"CommonAccount",
+								"AccDocumentDelete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "6) Aging Day",
+			"item": [
+				{
+					"name": "getAgingDaySelectPage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "PageOffset",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "PageSize",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "AgingDayName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "FromDays",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ToDays",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "SecOperationID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AgingDaySelectPage/CommonAccount/getAgingDaySelectPage",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AgingDaySelectPage",
+								"CommonAccount",
+								"getAgingDaySelectPage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAgingDaySelectView",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AgingDayID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AgingDaySelectView/CommonAccount/getAgingDaySelectView",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AgingDaySelectView",
+								"CommonAccount",
+								"getAgingDaySelectView"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgingDayDelete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AgingDayID",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AgingDayDelete/CommonAccount/AgingDayDelete",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AgingDayDelete",
+								"CommonAccount",
+								"AgingDayDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgingDayInsert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AgingDayName",
+									"value": "Mehul Test",
+									"type": "text"
+								},
+								{
+									"key": "FromDays",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "ToDays",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "Test Days",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "2024-02-10",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "2024-02-10",
+									"type": "text"
+								},
+								{
+									"key": "ModifiedCount",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AgingDayInsert/CommonAccount/AgingDayInsert",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AgingDayInsert",
+								"CommonAccount",
+								"AgingDayInsert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgingDayUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AgingDayID",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "AgingDayName",
+									"value": "XYZ",
+									"type": "text"
+								},
+								{
+									"key": "FromDays",
+									"value": "56",
+									"type": "text"
+								},
+								{
+									"key": "ToDays",
+									"value": "60",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "Test Days",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "2024-02-10",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "2024-02-10",
+									"type": "text"
+								},
+								{
+									"key": "ModifiedCount",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AgingDayUpdate/CommonAccount/AgingDayUpdate",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AgingDayUpdate",
+								"CommonAccount",
+								"AgingDayUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAgingDaySelectPK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AgingDayID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AgingDaySelectPK/CommonAccount/getAgingDaySelectPK",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AgingDaySelectPK",
+								"CommonAccount",
+								"getAgingDaySelectPK"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "7) MST Company",
+			"item": [
+				{
+					"name": "getCompanySelectPage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "PageOffset",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "PageSize",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "CompanyName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecOperationID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}CompanySelectPage/CommonAccount/getCompanySelectPage",
+							"host": [
+								"{{BASE_URL}}CompanySelectPage"
+							],
+							"path": [
+								"CommonAccount",
+								"getCompanySelectPage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompanyDelete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}CompanyDelete/CommonAccount/CompanyDelete",
+							"host": [
+								"{{BASE_URL}}CompanyDelete"
+							],
+							"path": [
+								"CommonAccount",
+								"CompanyDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCompanySelectView",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/CompanySelectView/CommonAccount/getCompanySelectView",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"CompanySelectView",
+								"CommonAccount",
+								"getCompanySelectView"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompanyInsert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "CompanyName",
+									"value": "GTU",
+									"type": "text"
+								},
+								{
+									"key": "CompanyCode",
+									"value": "gtu",
+									"type": "text"
+								},
+								{
+									"key": "Address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CityID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "StateID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Pincode",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PhoneNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "MobileNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "FaxNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Website",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "ResponsiblePersonName",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "ResponsiblePersonDesignation",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "ResponsiblePersonPhoneNo",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "STNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "STDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PANNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PANDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "TANNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "TANDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "VATNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "VATDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ImportExportCode",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "ImportExportDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrintHeader1",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "PrintHeader2",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "TermsCondition1",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "TermsCondition2",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "TermsCondition3",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "TermsCondition4",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "TermsCondition5",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "OpeningBalanceJournalID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "10-02-2024",
+									"type": "text"
+								},
+								{
+									"key": "ModifiedCount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "10-02-2024",
+									"type": "text"
+								},
+								{
+									"key": "CSTNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CSTDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "OpeningDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "LogoPath",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}CompanyInsert/CommonAccount/CompanyInsert",
+							"host": [
+								"{{BASE_URL}}CompanyInsert"
+							],
+							"path": [
+								"CommonAccount",
+								"CompanyInsert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompanyUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "CompanyID",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "CompanyName",
+									"value": "Mehul",
+									"type": "text"
+								},
+								{
+									"key": "CompanyCode",
+									"value": "GN",
+									"type": "text"
+								},
+								{
+									"key": "Address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CityID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "StateID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Pincode",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PhoneNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "MobileNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "FaxNo",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Website",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "ResponsiblePersonName",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "ResponsiblePersonDesignation",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "ResponsiblePersonPhoneNo",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "STNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "STDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PANNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PANDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "TANNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "TANDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "VATNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "VATDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ImportExportCode",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "ImportExportDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrintHeader1",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "PrintHeader2",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "TermsCondition1",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "TermsCondition2",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "TermsCondition3",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "TermsCondition4",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "TermsCondition5",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "OpeningBalanceJournalID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "10-02-2024",
+									"type": "text"
+								},
+								{
+									"key": "ModifiedCount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "10-02-2024",
+									"type": "text"
+								},
+								{
+									"key": "CSTNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CSTDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "OpeningDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "LogoPath",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}CompanyUpdate/CommonAccount/CompanyUpdate",
+							"host": [
+								"{{BASE_URL}}CompanyUpdate"
+							],
+							"path": [
+								"CommonAccount",
+								"CompanyUpdate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "8) Account Voucher",
+			"item": [
+				{
+					"name": "getAccountVoucherSelectPage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "PageOffset",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "PageSize",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "VoucherNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "FromDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ToDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CreditAccountIDAccountName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "DebitAccountIDAccountName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "FinYearID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "WarehouseID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Narration",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}AccountVoucherSelectPage/CommonAccount/getAccountVoucherSelectPage",
+							"host": [
+								"{{BASE_URL}}AccountVoucherSelectPage"
+							],
+							"path": [
+								"CommonAccount",
+								"getAccountVoucherSelectPage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountDocSelectComboBox",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountDocSelectComboBox/CommonAccount/getAccountDocSelectComboBox",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountDocSelectComboBox",
+								"CommonAccount",
+								"getAccountDocSelectComboBox"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountVoucherDelete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountVoucherID",
+									"value": "57",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "DeleteReason",
+									"value": "Test Delete",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}AccountVoucherDelete/CommonAccount/AccountVoucherDelete",
+							"host": [
+								"{{BASE_URL}}AccountVoucherDelete"
+							],
+							"path": [
+								"CommonAccount",
+								"AccountVoucherDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountVoucherInsert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "VoucherDate",
+									"value": "2024-02-09",
+									"type": "text"
+								},
+								{
+									"key": "ReferenceNo",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "ReferenceDate",
+									"value": "2024-02-09",
+									"type": "text"
+								},
+								{
+									"key": "Amount",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "Narration",
+									"value": "Test",
+									"type": "text"
+								},
+								{
+									"key": "DebitAccountID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "CreditAccountID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "DocumentID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "FinYearID",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "2024-02-09",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "2024-02-09",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountVoucherInsert/CommonAccount/AccountVoucherInsert",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountVoucherInsert",
+								"CommonAccount",
+								"AccountVoucherInsert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountVoucherUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocID",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "VoucherDate",
+									"value": "22-02-2024 00:00:00",
+									"type": "text"
+								},
+								{
+									"key": "ReferenceNo",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "ReferenceDate",
+									"value": "22-02-2024 00:00:00",
+									"type": "text"
+								},
+								{
+									"key": "Amount",
+									"value": "80001",
+									"type": "text"
+								},
+								{
+									"key": "Narration",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "DebitAccountID",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "CreditAccountID",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "DocumentID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "FinYearID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "2024-02-13",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "2024-02-13",
+									"type": "text"
+								},
+								{
+									"key": "VoucherNo",
+									"value": "CR2300006",
+									"type": "text"
+								},
+								{
+									"key": "AccountVoucherID",
+									"value": "75",
+									"type": "text"
+								},
+								{
+									"key": "BankID",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}AccountVoucherUpdate/CommonAccount/AccountVoucherUpdate",
+							"host": [
+								"{{BASE_URL}}AccountVoucherUpdate"
+							],
+							"path": [
+								"CommonAccount",
+								"AccountVoucherUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountVoucherSelectView",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountVoucherID",
+									"value": "65",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountVoucherSelectView/CommonAccount/AccountVoucherSelectView",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountVoucherSelectView",
+								"CommonAccount",
+								"AccountVoucherSelectView"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountVoucherSelectPK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountVoucherID",
+									"value": "75",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}AccountVoucherSelectPK/CommonAccount/getAccountVoucherSelectPK",
+							"host": [
+								"{{BASE_URL}}AccountVoucherSelectPK"
+							],
+							"path": [
+								"CommonAccount",
+								"getAccountVoucherSelectPK"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountVoucherSelectComboBox",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountVoucherSelectComboBox/CommonAccount/getAccountVoucherSelectComboBox",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountVoucherSelectComboBox",
+								"CommonAccount",
+								"getAccountVoucherSelectComboBox"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountVoucherUpdateVerification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountVoucherID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "VerificationByUserID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountVoucherUpdateVerification/CommonAccount/AccountVoucherUpdateVerification",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountVoucherUpdateVerification",
+								"CommonAccount",
+								"AccountVoucherUpdateVerification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountSelectByVoucherNo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "VoucherNo",
+									"value": "15",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}AccountSelectByVoucherNo/CommonAccount/getAccountSelectByVoucherNo",
+							"host": [
+								"{{BASE_URL}}AccountSelectByVoucherNo"
+							],
+							"path": [
+								"CommonAccount",
+								"getAccountSelectByVoucherNo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountSelectAutoCompleteByCompanyIDAccountTypeID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "VoucherNo",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "prefixText",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "AccountTypeID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountSelectAutoCompleteByCompanyIDAccountTypeID/CommonAccount/getAccountSelectAutoCompleteByCompanyIDAccountTypeID",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountSelectAutoCompleteByCompanyIDAccountTypeID",
+								"CommonAccount",
+								"getAccountSelectAutoCompleteByCompanyIDAccountTypeID"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountVoucherInsertSimpleWithAdjustment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountDocID",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "VoucherNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "VoucherDate",
+									"value": "2024-02-12",
+									"type": "text"
+								},
+								{
+									"key": "ReferenceNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ReferenceDate",
+									"value": "0001-01-01",
+									"type": "text"
+								},
+								{
+									"key": "Amount",
+									"value": "95959",
+									"type": "text"
+								},
+								{
+									"key": "Narration",
+									"value": "Testing Today 2",
+									"type": "text"
+								},
+								{
+									"key": "DebitAccountID",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "CreditAccountID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "checking",
+									"type": "text"
+								},
+								{
+									"key": "DocumentID",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "FinYearID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "2024-02-12",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "2024-02-12",
+									"type": "text"
+								},
+								{
+									"key": "BankID",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}AccountVoucherInsertSimpleWithAdjustment/CommonAccount/AccountVoucherInsertSimpleWithAdjustment",
+							"host": [
+								"{{BASE_URL}}AccountVoucherInsertSimpleWithAdjustment"
+							],
+							"path": [
+								"CommonAccount",
+								"AccountVoucherInsertSimpleWithAdjustment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "8) Account Voucher",
+			"item": [
+				{
+					"name": "getVoucherSelectPk",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/VoucherSelectView/CommonAccount/getVoucherSelectView",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"VoucherSelectView",
+								"CommonAccount",
+								"getVoucherSelectView"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "9) Account Detail",
+			"item": [
+				{
+					"name": "getAccountTypeSelectComboBoxByCompanyID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountTypeSelectComboBoxByCompanyID/CommonAccount/getAccountTypeSelectComboBoxByCompanyID",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountTypeSelectComboBoxByCompanyID",
+								"CommonAccount",
+								"getAccountTypeSelectComboBoxByCompanyID"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountGroupSelectComboBox",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountGroupSelectComboBox/CommonAccount/getAccountGroupSelectComboBox",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountGroupSelectComboBox",
+								"CommonAccount",
+								"getAccountGroupSelectComboBox"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountWiseCompanySelectForAccountWiseCompanyByAccountID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountWiseCompanySelectForAccountWiseCompanyByAccountID/CommonAccount/getAccountWiseCompanySelectForAccountWiseCompanyByAccountID",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountWiseCompanySelectForAccountWiseCompanyByAccountID",
+								"CommonAccount",
+								"getAccountWiseCompanySelectForAccountWiseCompanyByAccountID"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountSelectPage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "PageOffset",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "PageSize",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "TotalRecords",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "AccountTypeID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountPrintName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "IsZero",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "IsCR",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "IsRCM",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecOperationID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountSelectPage/CommonAccount/getAccountSelectPage",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountSelectPage",
+								"CommonAccount",
+								"getAccountSelectPage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountSelectView",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountSelectView/CommonAccount/getAccountSelectView",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountSelectView",
+								"CommonAccount",
+								"getAccountSelectView"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountSelectPK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}AccountSelectPK/CommonAccount/getAccountSelectPK",
+							"host": [
+								"{{BASE_URL}}AccountSelectPK"
+							],
+							"path": [
+								"CommonAccount",
+								"getAccountSelectPK"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountInsertWithAllDetail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountTypeID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "AccountName",
+									"value": "Mehul Testing",
+									"type": "text"
+								},
+								{
+									"key": "AccountPrintName",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Description",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "AccountIn",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "BalanceOn",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "OBAmount",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "OBAmountDisplay",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "OBon",
+									"value": "CR",
+									"type": "text"
+								},
+								{
+									"key": "TopAccountGroupID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "RelativeAccountGroupID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IsActive",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IsRCM",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "02/12/2024",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "02/12/2024",
+									"type": "text"
+								},
+								{
+									"key": "CityID",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "xmlMST_Company",
+									"value": "<dtMST_Company><CompanyID>2</CompanyID></dtMST_Company><dtMST_Company><CompanyID>3</CompanyID></dtMST_Company>",
+									"type": "text"
+								},
+								{
+									"key": "IsTDSApplicable",
+									"value": "False",
+									"type": "text"
+								},
+								{
+									"key": "PAN",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "GSTNo",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "AccountID",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{MEHUL_BASE_URL}}/AccountInsertWithAllDetail/CommonAccount/AccountInsertWithAllDetail",
+							"host": [
+								"{{MEHUL_BASE_URL}}"
+							],
+							"path": [
+								"AccountInsertWithAllDetail",
+								"CommonAccount",
+								"AccountInsertWithAllDetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountUpdateWithAllDetail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountTypeID",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "AccountName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountPrintName",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Description",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AccountIn",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "BalanceOn",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "OBAmount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "OBAmountDisplay",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "OBon",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "TopAccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "RelativeAccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "IsActive",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "IsRCM",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CityID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "xmlMST_Company",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IsTDSApplicable",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PAN",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "GSTNo",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountUpdateWithAllDetail/CommonAccount/AccountUpdateWithAllDetail",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountUpdateWithAllDetail",
+								"CommonAccount",
+								"AccountUpdateWithAllDetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountDelete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountID",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountDelete/CommonAccount/AccountDelete",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountDelete",
+								"CommonAccount",
+								"AccountDelete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "10) Account Ledger",
+			"item": [
+				{
+					"name": "getAccountSelectAutoCompleteByCompanyID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "prefixText",
+									"value": "___",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "SecOperationID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/AccountSelectAutoCompleteByCompanyID/CommonAccount/getAccountSelectAutoCompleteByCompanyID",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"AccountSelectAutoCompleteByCompanyID",
+								"CommonAccount",
+								"getAccountSelectAutoCompleteByCompanyID"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSelectLedgerByAccountID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "AccountID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ToDate",
+									"value": "2021-01-01",
+									"type": "text"
+								},
+								{
+									"key": "FromDate",
+									"value": "2021-01-01",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecOperationID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "FinYearID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/SelectLedgerByAccountID/CommonAccount/getSelectLedgerByAccountID",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"SelectLedgerByAccountID",
+								"CommonAccount",
+								"getSelectLedgerByAccountID"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "11) CFG Voucher",
+			"item": [
+				{
+					"name": "getVoucherSelectPage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "PageOffset",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "PageSize",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "VoucherCode",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "VoucherName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "SecOperationID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/VoucherSelectPage/CommonAccount/getVoucherSelectPage",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"VoucherSelectPage",
+								"CommonAccount",
+								"getVoucherSelectPage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CFGVoucherInsert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "VoucherCode",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "VoucherName",
+									"value": "Mehul Bhundiya",
+									"type": "text"
+								},
+								{
+									"key": "PrintLine1",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrintLine2",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrintLine3",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrintLine4",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "02/12/2024",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "02/12/2024",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/CFGVoucherInsert/CommonAccount/CFGVoucherInsert",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"CFGVoucherInsert",
+								"CommonAccount",
+								"CFGVoucherInsert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CFGVoucherUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "VoucherCode",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "VoucherName",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "PrintLine1",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrintLine2",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrintLine3",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrintLine4",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "02/12/2024",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "02/12/2024",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{MEHUL_BASE_URL}}/CFGVoucherUpdate/CommonAccount/CFGVoucherUpdate",
+							"host": [
+								"{{MEHUL_BASE_URL}}"
+							],
+							"path": [
+								"CFGVoucherUpdate",
+								"CommonAccount",
+								"CFGVoucherUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CFGVoucherDelete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/VoucherDelete/CommonAccount/VoucherDelete",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"VoucherDelete",
+								"CommonAccount",
+								"VoucherDelete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "12) Voucher Configuration",
+			"item": [
+				{
+					"name": "VoucherConfigSelectDuplicate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "VoucherConfigID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "FromDate",
+									"value": "01-01-2021",
+									"type": "text"
+								},
+								{
+									"key": "ToDate",
+									"value": "01-01-2024",
+									"type": "text"
+								},
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}VoucherConfigSelectDuplicate/CommonAccount/VoucherConfigSelectDuplicate",
+							"host": [
+								"{{BASE_URL}}VoucherConfigSelectDuplicate"
+							],
+							"path": [
+								"CommonAccount",
+								"VoucherConfigSelectDuplicate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VoucherConfigSelectPage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "PageOffset",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "PageSize",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "FromDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ToDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "SecOperationID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/VoucherConfigSelectPage/CommonAccount/VoucherConfigSelectPage",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"VoucherConfigSelectPage",
+								"CommonAccount",
+								"VoucherConfigSelectPage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VoucherConfigSelectPK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "VoucherConfigID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/VoucherConfigSelectPK/CommonAccount/VoucherConfigSelectPK",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"VoucherConfigSelectPK",
+								"CommonAccount",
+								"VoucherConfigSelectPK"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectDuplicateVoucher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "VoucherID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "VoucherCode",
+									"value": "a",
+									"type": "text"
+								},
+								{
+									"key": "VoucherName",
+									"value": "a",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:55463/getVoucherSelectForDuplicate/CommonAccount/getVoucherSelectForDuplicate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55463",
+							"path": [
+								"getVoucherSelectForDuplicate",
+								"CommonAccount",
+								"getVoucherSelectForDuplicate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VoucherConfigInsert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "NumberingMethod",
+									"value": "D",
+									"type": "text"
+								},
+								{
+									"key": "Prefix",
+									"value": "ON",
+									"type": "text"
+								},
+								{
+									"key": "PrefixFormula",
+									"value": "AASDLKJ#$#%LKJ",
+									"type": "text"
+								},
+								{
+									"key": "StartingNo",
+									"value": "301",
+									"type": "text"
+								},
+								{
+									"key": "LastPKNo",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ResetAfter",
+									"value": "N",
+									"type": "text"
+								},
+								{
+									"key": "NumericPartWidth",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "AppendZero",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "FromDate",
+									"value": "12-02-2024",
+									"type": "text"
+								},
+								{
+									"key": "ToDate",
+									"value": "12-02-2024",
+									"type": "text"
+								},
+								{
+									"key": "PrintAfterSave",
+									"value": "True",
+									"type": "text"
+								},
+								{
+									"key": "Print1",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Print2",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Print3",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Print4",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "12-02-2024",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "12-02-2024",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/VoucherConfigInsert/CommonAccount/VoucherConfigInsert",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"VoucherConfigInsert",
+								"CommonAccount",
+								"VoucherConfigInsert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VoucherConfigUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "VoucherConfigID",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "VoucherID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "NumberingMethod",
+									"value": "A",
+									"type": "text"
+								},
+								{
+									"key": "Prefix",
+									"value": "CHK",
+									"type": "text"
+								},
+								{
+									"key": "PrefixFormula",
+									"value": "CHK",
+									"type": "text"
+								},
+								{
+									"key": "StartingNo",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "LastPKNo",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ResetAfter",
+									"value": "N",
+									"type": "text"
+								},
+								{
+									"key": "NumericPartWidth",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "AppendZero",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "FromDate",
+									"value": "12-02-2024",
+									"type": "text"
+								},
+								{
+									"key": "ToDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrintAfterSave",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Print1",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Print2",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Print3",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Print4",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Remarks",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Created",
+									"value": "12-02-2024",
+									"type": "text"
+								},
+								{
+									"key": "Modified",
+									"value": "12-02-2024",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/VoucherConfigUpdate/CommonAccount/VoucherConfigUpdate",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"VoucherConfigUpdate",
+								"CommonAccount",
+								"VoucherConfigUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteVoucherConfig",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "VoucherConfigID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/DeleteVoucherConfig/CommonAccount/DeleteVoucherConfig",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"DeleteVoucherConfig",
+								"CommonAccount",
+								"DeleteVoucherConfig"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "13) Account OB",
+			"item": [
+				{
+					"name": "getCitySelectComboBox",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:55463/getCitySelectComboBox/CommonAccount/getCitySelectComboBox",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55463",
+							"path": [
+								"getCitySelectComboBox",
+								"CommonAccount",
+								"getCitySelectComboBox"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountSelectOpeninBalance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "AccountTypeID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "OBType",
+									"value": "All",
+									"type": "text"
+								},
+								{
+									"key": "CityID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "TopAccountGroupID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecOperationID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/getAccountSelectOpeninBalance/CommonAccount/getAccountSelectOpeninBalance",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"getAccountSelectOpeninBalance",
+								"CommonAccount",
+								"getAccountSelectOpeninBalance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccountUpdateOB",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "InstituteCode",
+									"value": "LOC",
+									"type": "text"
+								},
+								{
+									"key": "UserID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sbOB",
+									"value": "<OBData>\n<AccountID>5</AccountID><OBAmount>1200.00</OBAmount>\n<OBOn>CR</OBOn>\n</OBData>\n<OBData>\n<AccountID>1</AccountID><OBAmount>1250.00</OBAmount>\n<OBOn>DR</OBOn>\n</OBData><OBData><AccountID>7</AccountID><OBAmount>250.00</OBAmount>\n<OBOn>CR</OBOn>\n</OBData>\n<OBData>\n<AccountID>2</AccountID><OBAmount>2500050.00</OBAmount>\n<OBOn>CR</OBOn>\n</OBData>\n<OBData>\n<AccountID>8</AccountID><OBAmount>230050.00</OBAmount>\n<OBOn>CR</OBOn>\n</OBData><OBData><AccountID>9</AccountID><OBAmount>050.00</OBAmount>\n<OBOn>CR</OBOn>\n</OBData>\n<OBData>\n<AccountID>4</AccountID><OBAmount>050.00</OBAmount>\n<OBOn>DR</OBOn>\n</OBData><OBData><AccountID>3</AccountID><OBAmount>12500050.00</OBAmount>\n<OBOn>DR</OBOn>\n</OBData>",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/updateAccountUpdateOB/CommonAccount/updateAccountUpdateOB",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"updateAccountUpdateOB",
+								"CommonAccount",
+								"updateAccountUpdateOB"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "http://192.168.1.5:6307/",
+			"value": "http://192.168.1.5:6307/"
+		},
+		{
+			"key": "base_url_local",
+			"value": "http://localhost:55463/"
+		}
+	]
+}

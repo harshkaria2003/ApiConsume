@@ -1,0 +1,39 @@
+﻿﻿@using System.Data;
+@model ApiConsume.Areas.Airports.Models.AirportsModel
+@{
+    Layout = "_Layout";
+}
+@using (Html.BeginForm("Insert", "Airports", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Airports form</h4>
+
+                    <div>@Html.HiddenFor(model => model.airport_id)</div>
+                    <div>@Html.LabelFor(model => model.airport_code)</div>
+                    <div>@Html.TextBoxFor(model => model.airport_code, new { @class = "form-control " })</div>
+                    <div>@Html.LabelFor(model => model.airport_name)</div>
+                    <div> @Html.TextBoxFor(model => model.airport_name, new { @class = "form-control" })</div>
+                    <div>@Html.LabelFor(model => model.city)</div>
+                    <div> @Html.TextBoxFor(model => model.city, new { @class = "form-control " })</div>
+                    <div>@Html.LabelFor(model => model.country)</div>
+                    <div> @Html.TextBoxFor(model => model.country, new { @class = "form-control " })</div>
+                    <div>@Html.LabelFor(model => model.departure_airport_id)</div>
+                    <div> @Html.TextBoxFor(model => model.departure_airport_id, new { @class = "form-control " })</div>
+                    <div>@Html.LabelFor(model => model.destination_airport_id)</div>
+                    <div> @Html.TextBoxFor(model => model.destination_airport_id, new { @class = "form-control " })</div>
+
+                    
+
+                    <div>
+                        <button type="submit" class="btn btn-outline-primary mr-2 mt-2">Submit</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    }

@@ -1,0 +1,177 @@
+﻿@using System.Data;
+@model ApiConsume.Areas.Airlines.Models.AirlinesListResponse
+
+@{
+    Layout = "_Layout";
+}
+
+@section Scripts
+{
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+
+        $(document).ready(function () {
+            var successMessage = '@TempData["Message"]';
+            var deleteMessage = '@TempData["Message1"]';
+
+            if (successMessage) {
+                Swal.fire({
+                    title: "Success",
+                    text: successMessage,
+                    icon: "success"
+                });
+            }
+
+            if (deleteMessage) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Error",
+                    text: deleteMessage,
+                });
+            }
+        });
+        function Delete(airline_id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You want to delete this airport?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '@Url.Action("DeleteAirline", "Airlines")?airline_id=' + airline_id;
+                }
+            });
+        }
+
+        function Update(airport_id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You want to update this airport?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, update it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '@Url.Action("Edit", "Airlines")? airline_id = ' + airline_id;
+                }
+            });
+        }
+
+        // Function to perform search
+        function performSearch() {
+            var productName = $("input[name='airline_name']").val().toLowerCase();
+            var price = $("input[name='iata_code']").val().toLowerCase();
+
+            $("tbody tr").each(function (index, element) {
+                var row = $(element);
+                var name = row.find("td:eq(1)").text().toLowerCase(); // Convert to lowercase
+                var pr = row.find("td:eq(2)").text().toLowerCase(); // Convert to lowercase
+
+                // Check if the values are not undefined
+                if ((productName === '' || name.includes(productName)) &&
+                    (price === '' || pr.includes(price))) {
+                    // Show the row if it meets the search criteria
+                    row.show();
+                } else {
+                    // Hide the row if it doesn't meet the search criteria
+                    row.hide();
+                }
+            });
+        }
+
+        // Trigger search when inputs change
+        $(document).on("input", "input[name='airline_name'], input[name='iata_code']", function () {
+            performSearch();
+        });
+
+    </script>
+}
+
+<div class="main-panel">
+    <div class="col-lg-10 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-header bg-black">
+                @using (Html.BeginForm("Insert", "Airlines", FormMethod.Post))
+                {
+                    <td><button class="btn btn-outline-primary">ADD Airline</button></td>
+                }
+                <div class="col-md-8">
+                    <form class="form-inline" role="search" id="employeeSearchForm">
+                        <div class="form-group">
+                            <input class="form-control mr-sm-2" placeholder="Enter Airline Name" type="text" name="airline_name">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control mr-sm-2" placeholder="Enter code" type="text" name="iata_code">
+                        </div>
+                        <button id="searchButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <div class="col">
+                            <a class="btn btn-success" asp-area="Airlines" asp-controller="Airlines" asp-action="Export_Airline_List_To_Excel(">
+                                <i class="bi bi-file-earmark-excel"></i><span> Excel</span>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="btn btn-danger"  asp-area="Airlines" asp-controller="Airlines" asp-action="Export_Airline_List_To_pdf">
+                                <i class="bi bi-file-earmark-pdf" ></i><span> Pdf</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th> Airline ID </th>
+                                <th> Airline Name </th>
+                                <th> IATA Code </th>
+                                <th> ICAO Code </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @if (Model.data.Count > 0)
+                            {
+                                @foreach (var row in Model.data)
+                                {
+                                    <tr>
+                                        <td>@row.airline_id</td>
+                                        <td>@row.airline_name</td>
+                                        <td>@row.iata_code</td>
+                                        <td>@row.icao_code</td>
+                                        <td>
+                                            @using (Html.BeginForm("DeleteAirline", "Airlines", FormMethod.Post))
+                                            {
+                                                @Html.Hidden("ID", row.airline_id)
+                                                <button class="btn btn-outline-danger">Delete</button>
+                                            }
+                                        </td>
+                                        <td>
+                                            @using (Html.BeginForm("Edit", "Airlines", FormMethod.Post))
+                                            {
+                                                @Html.Hidden("ID", row.airline_id)
+                                                <button class="btn btn-outline-success">Edit</button>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="4">Nothing to show</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

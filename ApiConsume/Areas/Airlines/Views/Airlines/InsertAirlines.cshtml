@@ -1,0 +1,31 @@
+﻿﻿@using System.Data;
+@model ApiConsume.Areas.Airlines.Models.AirlinesModel
+@{
+    Layout = "_Layout";
+}
+@using (Html.BeginForm("Insert", "Airlines", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Airlines form</h4>
+
+                    <div>@Html.HiddenFor(model => model.airline_id)</div>
+                    <div>@Html.LabelFor(model => model.airline_name)</div>
+                    <div>@Html.TextBoxFor(model => model.airline_name, new { @class = "form-control " })</div>
+                    <div>@Html.LabelFor(model => model.icao_code)</div>
+                    <div> @Html.TextBoxFor(model => model.icao_code, new { @class = "form-control" })</div>
+                    <div>@Html.LabelFor(model => model.iata_code)</div>
+                    <div> @Html.TextBoxFor(model => model.iata_code, new { @class = "form-control " })</div>
+
+                    <div>
+                        <button type="submit" class="btn btn-outline-primary mr-2 mt-2">Submit</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+}

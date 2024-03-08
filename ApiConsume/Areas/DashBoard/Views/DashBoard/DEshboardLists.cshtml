@@ -1,0 +1,43 @@
+﻿@{
+	Layout = "_Layout";
+}
+@model ApiConsume.Areas.DashBoard.Models.DashBoardModel;
+@foreach (var item in Model.data)
+{
+	<div class="row">
+		<div class="col-xs-12 col-md-6 col-lg-6 col-xl-3 p-5 rounded bg-danger">
+			<div class="card-box  ">
+				<i class="fa fa-file-text-o float-right text-black"></i>
+				<h6 class="text-black text-uppercase m-b-20">Airline Count</h6>
+				<a asp-action="Index" asp-controller="Airlines" asp-area="Airlines"><h1 class="m-b-20 text-black counter">@item.airlinesCount</h1></a>
+				@*<span class="text-white">15 New Orders</span>*@
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-md-6 col-lg-6 col-xl-3 p-5 rounded bg-warning">
+			<div class="card-box noradius noborder ">
+				<i class="fa fa-bar-chart float-right text-white"></i>
+				<h6 class="text-white text-uppercase m-b-20">Airports Count</h6>
+				<a asp-action="Index" asp-controller="Airports" asp-area="Airports"><h1 class="m-b-20 text-white counter">@item.airportsCount</h1></a>
+				<span class="text-white">@*Bounce rate: 25%*@</span>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-md-6 col-lg-6 col-xl-3 p-5 rounded bg-info ">
+			<div class="card-box noradius noborder ">
+				<i class="fa fa-user-o float-right text-white"></i>
+				<h6 class="text-white text-uppercase m-b-20">Customers count </h6>
+				<a asp-action="Index" asp-controller="Customers" asp-area="Customers"><h1 class="m-b-20 text-white counter">@item.customersCount</h1></a>
+				@*<span class="text-white">25 New Users</span>*@
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-6 col-lg-6 col-xl-3 p-5 rounded bg-info">
+			<div class="card-box noradius noborder ">
+				<i class="fa fa-user-o float-right text-black-50"></i>
+				<h6 class="text-black-50 text-uppercase m-b-20">Flights count </h6>
+				<a asp-action="Index" asp-controller="Flights" asp-area="Flights"><h1 class="m-b-20 text-white counter">@item.flightsCount</h1></a>
+				@*<span class="text-white">25 New Users</span>*@
+			</div>
+		</div>
+	</div>
+}

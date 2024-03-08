@@ -1,0 +1,159 @@
+﻿@using System.Data;
+@model ApiConsume.Areas.Customers.Models.CustomersListResponse
+
+@{
+    Layout = "_Layout";
+}
+
+@section Scripts
+{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+
+
+        // Function to perform search
+        function performSearch() {
+            var productName = $("input[name='first_name']").val().toLowerCase();
+            var price = $("input[name='last_name']").val().toLowerCase();
+
+
+            $("tbody tr").each(function (index, element) {
+                var row = $(element);
+                var name = row.find("td:eq(1)").text().toLowerCase(); // Convert to lowercase
+                var pr = row.find("td:eq(2)").text().toLowerCase(); // Convert to lowercase
+
+                // Check if the values are not undefined
+                if ((productName === '' || name.includes(productName)) &&
+                    (price === '' || pr.includes(price))) {
+                    // Show the row if it meets the search criteria
+                    row.show();
+                } else {
+                    // Hide the row if it doesn't meet the search criteria
+                    row.hide();
+                }
+            });
+        }
+
+        // Trigger search when inputs change
+        $(document).on("input", "input[name='first_name'], input[name='last_name']", function () {
+            performSearch();
+        });
+
+
+
+    </script>
+
+}
+
+<div class="main-panel">
+    <div class="col-lg-10 grid-margin stretch-card">
+        <div class="card -10">
+            <div class="card-header bg-black">
+                @using (Html.BeginForm("Insert", "Customers", FormMethod.Post))
+                {
+
+                    <td><button class="btn btn-outline-primary">ADD Customer</button></td>
+
+
+                }
+                 <div class="col-md-8">
+                    <form class="form-inline" role="search" id="employeeSearchForm">
+                        <div class="form-group">
+                            <input class="form-control mr-sm-2" placeholder="Enter customer Name" type="text" name="first_name">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control mr-sm-2" placeholder="Enter last_name " type="text" name="last_name">
+                        </div>
+                        <button id="searchButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <div class="col">
+                            <a class="btn btn-success" asp-area="Customers" asp-controller="Customers" asp-action="Export_Customers_List_To_Excel">
+                                <i class="bi bi-file-earmark-excel"></i><span> Excel</span>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="btn btn-danger" asp-area="Customers" asp-controller="Customers" asp-action="Export_Customers_List_To_pdf">
+                                <i class="bi bi-file-earmark-pdf"></i><span> Pdf</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                Customers
+                            </tr>
+                            @*<tr>
+                            <td><a asp-area="Airlines" controller="Airlines" asp-action="Insert" class="btn btn-outline-primary">Add Airlines</a></td>
+                            </tr>*@
+                            <tr>
+                                <th> @Html.DisplayName("customer_id") </th>
+                                <th> @Html.DisplayName("first_name") </th>
+                                <th> @Html.DisplayName("last_name") </th>
+                                <th> @Html.DisplayName("email") </th>
+                                <th> @Html.DisplayName("phone_number") </th>
+                               
+                        </thead>
+                        <tbody>
+
+                            @if (Model.data.Count > 0)
+                            {
+                                @foreach (var row in Model.data)
+                                {
+                                    <tr>
+
+                                        <td>@row.customer_id  </td>
+                                        <td>@row.first_name  </td>
+                                        <td>@row.last_name  </td>
+                                        <td>@row.email  </td>
+                                        <td>@row.phone_number  </td>
+                                      
+                                    
+
+
+
+
+
+
+                                        <td>
+                                            @using (Html.BeginForm("DeleteCustomers", "Customers", FormMethod.Post))
+                                            {
+                                            <td>@Html.Hidden("ID", row.customer_id)</td>
+                                            <td><button class="btn btn-outline-danger">Delete</button></td>
+
+                                            }
+                                        </td>
+                                        <td>
+                                            @using (Html.BeginForm("Edit", "Customers", FormMethod.Post))
+                                            {
+                                            <td>@Html.Hidden("ID", row.customer_id)</td>
+                                            <td><button class="btn btn-outline-success">Edit</button></td>
+
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+
+                                <tr>
+                                    <h2> nothing to show </h2>
+
+
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

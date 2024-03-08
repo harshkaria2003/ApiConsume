@@ -1,0 +1,39 @@
+﻿﻿@using System.Data;
+@model ApiConsume.Areas.Flights.Models.FlightsModel
+@{
+    Layout = "_Layout";
+}
+@using (Html.BeginForm("Insert", "Flights", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Flight form</h4>
+
+                    <div>@Html.HiddenFor(model => model.flight_id)</div>
+                    <div>@Html.LabelFor(model => model.airline_id)</div>
+                    <div>@Html.TextBoxFor(model => model.airline_id, new { @class = "form-control " })</div>
+                    <div>@Html.LabelFor(model => model.flight_number)</div>
+                    <div> @Html.TextBoxFor(model => model.flight_number, new { @class = "form-control" })</div>
+                    <div>@Html.LabelFor(model => model.departure_datetime)</div>
+                    <div> @Html.TextBoxFor(model => model.departure_datetime, new { @class = "form-control " })</div>
+                    <div>@Html.LabelFor(model => model.arrival_datetime)</div>
+                    <div> @Html.TextBoxFor(model => model.arrival_datetime, new { @class = "form-control " })</div>
+                    <div>@Html.LabelFor(model => model.available_seats)</div>
+                    <div> @Html.TextBoxFor(model => model.available_seats, new { @class = "form-control " })</div>
+                    <div>@Html.LabelFor(model => model.airport_id)</div>
+                    <div> @Html.TextBoxFor(model => model.airport_id, new { @class = "form-control " })</div>
+
+
+
+                    <div>
+                        <button type="submit" class="btn btn-outline-primary mr-2 mt-2">Submit</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+}

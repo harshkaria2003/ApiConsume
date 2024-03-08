@@ -1,0 +1,162 @@
+﻿@using System.Data;
+@model ApiConsume.Areas.Flights.Models.FlightListResponse
+
+@{
+    Layout = "_Layout";
+}
+
+@section Scripts
+{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+
+
+        // Function to perform search
+        function performSearch() {
+            var productName = $("input[name='flight_number']").val().toLowerCase();
+            var price = $("input[name='available_seats']").val().toLowerCase();
+
+
+            $("tbody tr").each(function (index, element) {
+                var row = $(element);
+                var name = row.find("td:eq(2)").text().toLowerCase(); // Convert to lowercase
+                var pr = row.find("td:eq(5)").text().toLowerCase(); // Convert to lowercase
+
+                // Check if the values are not undefined
+                if ((productName === '' || name.includes(productName)) &&
+                    (price === '' || pr.includes(price))) {
+                    // Show the row if it meets the search criteria
+                    row.show();
+                } else {
+                    // Hide the row if it doesn't meet the search criteria
+                    row.hide();
+                }
+            });
+        }
+
+        // Trigger search when inputs change
+        $(document).on("input", "input[name='flight_number'], input[name='available_seats']", function () {
+            performSearch();
+        });
+
+
+
+    </script>
+
+}
+
+
+<div class="main-panel">
+    <div class="col-lg-100 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-header bg-black">
+                @using (Html.BeginForm("Insert", "Flights", FormMethod.Post))
+                {
+
+                    <td><button class="btn btn-outline-primary">ADD Flight</button></td>
+
+                }
+
+                <div class="col-md-8">
+                    <form class="form-inline" role="search" id="employeeSearchForm">
+                        <div class="form-group">
+                            <input class="form-control mr-sm-2" placeholder="Enter flight_number " type="text" name="flight_number">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control mr-sm-2" placeholder="Enter available_seats " type="text" name="available_seats">
+                        </div>
+                        <button id="searchButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <div class="col">
+                            <a class="btn btn-success" asp-area="Flights" asp-controller="Flights" asp-action="Export_Flights_List_To_Excel">
+                                <i class="bi bi-file-earmark-excel"></i><span> Excel</span>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="btn btn-danger" asp-area="Flights" asp-controller="Flights" asp-action="Export_Flights_List_To_pdf">
+                                <i class="bi bi-file-earmark-pdf"></i><span> Pdf</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                Flights
+                            </tr>
+                            @*<tr>
+                            <td><a asp-area="Airlines" controller="Airlines" asp-action="Insert" class="btn btn-outline-primary">Add Airlines</a></td>
+                            </tr>*@
+                            <tr>
+                                <th> @Html.DisplayName("flight_id") </th>
+                                <th> @Html.DisplayName("airline_id") </th>
+                                <th> @Html.DisplayName("flight_number") </th>
+                                <th> @Html.DisplayName("departure_datetime") </th>
+                                <th> @Html.DisplayName("arrival_datetime") </th>
+                                <th> @Html.DisplayName("available_seats") </th>
+                                <th> @Html.DisplayName("airport_id")</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @if (Model.data.Count > 0)
+                            {
+                                @foreach (var row in Model.data)
+                                {
+                                    <tr>
+
+                                        <td>@row.flight_id  </td>
+                                        <td>@row.airline_id  </td>
+                                        <td>@row.flight_number  </td>
+                                        <td>@row.departure_datetime  </td>
+                                        <td>@row.arrival_datetime  </td>
+                                        <td>@row.available_seats  </td>
+                                        <td>@row.airport_id  </td>
+
+
+
+
+
+
+                                        <td>
+                                            @using (Html.BeginForm("DeleteFlight", "Flights", FormMethod.Post))
+                                            {
+                                            <td>@Html.Hidden("ID", row.flight_id)</td>
+                                            <td><button class="btn btn-outline-danger">Delete</button></td>
+
+                                            }
+                                        </td>
+                                        <td>
+                                            @using (Html.BeginForm("Edit", "Flights", FormMethod.Post))
+                                            {
+                                            <td>@Html.Hidden("ID", row.flight_id)</td>
+                                            <td><button class="btn btn-outline-success">Edit</button></td>
+
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+
+                                <tr>
+                                    <h2> nothing to show </h2>
+
+
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

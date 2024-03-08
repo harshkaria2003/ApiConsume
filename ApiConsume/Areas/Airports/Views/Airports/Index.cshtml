@@ -1,0 +1,178 @@
+﻿@using System.Data
+@model ApiConsume.Areas.Airports.Models.AirportListResponse
+
+@{
+    Layout = "_Layout";
+}
+
+@section Scripts
+{
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var successMessage = '@TempData["Message"]';
+            var deleteMessage = '@TempData["Message1"]';
+
+            if (successMessage) {
+                Swal.fire({
+                    title: "Success",
+                    text: successMessage,
+                    icon: "success"
+                });
+            }
+
+            if (deleteMessage) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Error",
+                    text: deleteMessage,
+                });
+            }
+        });
+
+        function Delete(airport_id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You want to delete this airport?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '@Url.Action("DeleteAirport", "Airports")?airport_id=' + airport_id;
+                }
+            });
+        }
+
+        function Update(airport_id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You want to update this airport?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, update it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '@Url.Action("Edit", "Airports")?airport_id=' + airport_id;
+                }
+            });
+        }
+
+        // Function to perform search
+        function performSearch() {
+            var airportName = $("input[name='airport_name']").val().toLowerCase();
+            var country = $("input[name='country']").val().toLowerCase();
+
+            $("tbody tr").each(function (index, element) {
+                var row = $(element);
+                var name = row.find("td:eq(2)").text().toLowerCase();
+                var pr = row.find("td:eq(4)").text().toLowerCase();
+
+                if ((airportName === '' || name.includes(airportName)) &&
+                    (country === '' || pr.includes(country))) {
+                    row.show();
+                } else {
+                    row.hide();
+                }
+            });
+        }
+
+        // Trigger search when inputs change
+        $(document).on("input", "input[name='airport_name'], input[name='country']", function () {
+            performSearch();
+        });
+    </script>
+}
+
+<div class="main-panel">
+    <div class="col-lg-10 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-header bg-black">
+                @using (Html.BeginForm("Insert", "Airports", FormMethod.Post))
+                {
+                    <button class="btn btn-outline-primary">Add Airport</button>
+                }
+
+                <div class="col-md-8">
+                    <form class="form-inline" role="search" id="airportSearchForm">
+                        <div class="form-group">
+                            <input class="form-control mr-sm-2" placeholder="Enter Airport Name" type="text" name="airport_name">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control mr-sm-2" placeholder="Enter Country" type="text" name="country">
+                        </div>
+                        <button id="searchButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <div class="col">
+                            <a class="btn btn-success" asp-area="Airports" asp-controller="Airports" asp-action="Export_Airport_List_To_Excel">
+                                <i class="bi bi-file-earmark-excel"></i><span> Excel</span>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="btn btn-danger" asp-area="Airports" asp-controller="Airports" asp-action="Export_Airport_List_To_pdf">
+                                <i class="bi bi-file-earmark-pdf"></i><span> Pdf</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th> Airport ID </th>
+                                <th> Airport Code </th>
+                                <th> Airport Name </th>
+                                <th> City </th>
+                                <th> Country </th>
+                                <th> Departure Airport ID </th>
+                                <th> Destination Airport ID </th>
+                                <th> Actions </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.data.Count > 0)
+                            {
+                                @foreach (var row in Model.data)
+                                {
+                                    <tr>
+                                        <td>@row.airport_id</td>
+                                        <td>@row.airport_code</td>
+                                        <td>@row.airport_name</td>
+                                        <td>@row.city</td>
+                                        <td>@row.country</td>
+                                        <td>@row.departure_airport_id</td>
+                                        <td>@row.destination_airport_id</td>
+                                        <td>
+                                            @using (Html.BeginForm("DeleteAirport", "Airports", FormMethod.Post))
+                                            {
+                                                @Html.Hidden("ID", row.airport_id)
+                                                <button class="btn btn-outline-danger" onclick="Delete('@row.airport_id')">Delete</button>
+                                            }
+                                            @using (Html.BeginForm("Edit", "Airports", FormMethod.Post))
+                                            {
+                                                @Html.Hidden("ID", row.airport_id)
+                                                <button class="btn btn-outline-success" onclick="Update('@row.airport_id')">Edit</button>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="8">Nothing to show</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
